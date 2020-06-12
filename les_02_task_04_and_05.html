@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2. Задания 4 и 5.</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        // Задание 4:
+
+        function sumNumbers(a, b) {
+            return Number(a + b);
+        }
+
+        function subtNumbers(a, b) {
+            return Number(a - b);
+        }
+
+        function divNumbers(a, b) {
+            return Number(a / b);
+        }
+
+        function multNumbers(a, b) {
+            return Number(a * b);
+        }
+
+        // Задание 5:
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    return sumNumbers(arg1, arg2);
+                case '-':
+                    return subtNumbers(arg1, arg2);
+                case '/':
+                    return divNumbers(arg1, arg2);
+                case '*':
+                    return multNumbers(arg1, arg2);
+                default:
+                    throw new Error('Операция не может принять параметр ' + operation);
+            }
+        }
+
+        //вывод в консоль для проверки:
+        console.log(mathOperation(2, 5, '+'));
+        console.log(mathOperation(9, 4, '-'));
+        console.log(mathOperation(10, 5, '/'));
+        console.log(mathOperation(4, 3, '*'));
+        console.log(mathOperation(2, 5, 'plus'));
+        
+    </script>
+</body>
+</html>

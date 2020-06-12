@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2. Задание 2.</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let a = 2;
+        let x = 1 + (a *= 2);
+
+        console.log(a);
+        //a = 4, т.к. оператор *= умножил значение переменной "a" на 2
+        // и присвоил переменной "a" результат этого действия (2 * 2 = 4)
+
+        console.log(x);
+        //x = 5, это результат сложения 1 + a, где a = 4 после присваивания нового значения
+
+    </script>
+</body>
+</html>

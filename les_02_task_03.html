@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2. Задание 3.</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        
+        let a = 29, b = -36, c;
+        if (a >= 0 && b >=0) {
+            c = a - b;
+        } else if (a < 0 && b < 0) {
+            c = a * b;
+        }
+        else {
+            c = a + b;
+            /*
+            сначала пришла идея определить знак при помощи умножения a * b, а потом понял,
+            что можно сделать еще проще, так как после предыдущих двух проверок остается
+            только вариант, что у "a" и "b" разные знаки :)
+            */
+        }
+        console.log(c);
+    </script>
+</body>
+</html>
