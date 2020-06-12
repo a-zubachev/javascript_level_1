@@ -14,7 +14,7 @@
                 return 'рублей';
             }
             else {
-                switch (lastDigit) {
+                switch (lastDigit(num)) {
                     case 0:
                     case 5:
                     case 6:
@@ -40,10 +40,10 @@
             }
             else {
                 return Number(digit)
-                };
+            }
         }
 
-        function LastDigit(num) {
+        function lastDigit(num) {
             num = String(num);
             let digit = num.charAt(num.length - 1);
             return Number(digit);
