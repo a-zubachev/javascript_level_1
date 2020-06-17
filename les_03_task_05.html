@@ -36,7 +36,7 @@
             },
         ];
 
-        const productsWithPhotos = products.filter(product => 'photos' in product && product.photos != '');
+        const productsWithPhotos = products.filter(product => 'photos' in product && product.photos.length > 0);
         const productSortedPrice = products.sort(function(product1, product2) {
             return product1.price - product2.price;
         });
