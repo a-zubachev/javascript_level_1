@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 4. Задание 1.</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function getObjectFromNumber(num) {
+            if (Number.isInteger(num) && num >= 0 && num <= 999){
+                return {
+                units: num % 10,
+                tens: Math.floor(num / 10) % 10,
+                hundereds: Math.floor(num / 100),
+                }
+            } else {
+                console.log('Должно быть введено целое число от 0 до 999')
+                return {}
+            }
+        }
+
+        //Проверяем работу кода с разными входными значениями:
+        console.log(getObjectFromNumber(428));
+        console.log(getObjectFromNumber(35.2));
+        console.log(getObjectFromNumber(7951));
+        console.log(getObjectFromNumber('Hello'));
+    </script>
+</body>
+</html>

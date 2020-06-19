@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 4. Задание 1.1 (es5).</title>
+</head>
+<body>
+    <script>
+        // Чуть усложнил задание, добавив возможность присваивать переменной "discount" произвольный
+        // размер скидки при помощи метода "makeDiscount".
+
+        'use strict';
+
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+            this.discount = 0;
+        }
+
+        Product.prototype.makeDiscount = function (discount) {
+            this.discount = discount;
+            this.price = this.price * (1 - this.discount / 100);
+        }
+
+        const product1 = new Product('Продукт 1', 1000);
+        const product2 = new Product('Продукт 2', 540);
+        const product3 = new Product('Продукт 3', 860);
+
+        //На продукт 1 будет скидка 25%, на продукт 2 - 10%, на продукт 3 скидки не будет:
+        product1.makeDiscount(25);
+        product2.makeDiscount(10);
+
+        console.log(product1);
+        console.log(product2);
+        console.log(product3);
+
+    </script>
+</body>
+</html>
